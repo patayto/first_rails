@@ -321,3 +321,11 @@ a {
   float: right;
   color: rgba(0,0,0,0.5);
 }
+
+#author {
+  float: right;
+  padding-top: 16px;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgba(0,0,0,0.7);
+}
