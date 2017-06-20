@@ -13,9 +13,15 @@
     <%= f.text_area :body, :class => 'new_article_body_text' %>
   </p>
   <p>
-    <%= f.submit 'Create Article', :class => 'create_new_article_button'%>
+    <%= f.label :tag_list, "Tags", :class => "tags_title" %><span> (comma seperated) </span><br>
+    <%= f.text_field :tag_list, :class => "tags_title_text", :autocomplete => 'off' %>
   </p>
-  <p>
-    <%= link_to 'Cancel', articles_path, :id => 'cancel_button' %>
-  </p>
+  <div class="edit_buttons">
+    <p>
+      <%= f.submit 'Create Article', :class => 'create_new_article_button'%>
+    </p>
+    <p>
+      <%= link_to 'Cancel', articles_path, :id => 'cancel_button' %>
+    </p>
+  </div>
 <% end %>

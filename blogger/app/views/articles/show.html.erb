@@ -1,5 +1,11 @@
 <h1 id="main_article_title"><%= @article.title %></h1>
 <div id="main_article_time"><%= @article.created_at.strftime("%A %d %b %Y at %I:%M %p") %></div>
+<p id="tags">
+  Tags:
+  <% @article.tags.each do |tag| %>
+    <span id="tag"><%= link_to tag.name, tag_path(tag) %></span>
+  <% end %>
+</p>
 <p id="main_article_body"><%= @article.body %></p>
 <div id="update_article">
   <%= link_to 'Edit Article', edit_article_path(@article), id: "edit_article" %>

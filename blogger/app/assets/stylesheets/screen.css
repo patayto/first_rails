@@ -22,12 +22,12 @@ li {
 }
 
 li:hover {
-  background-color: rgba(0, 0, 0, 0.12);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
 .article_date {
@@ -47,7 +47,7 @@ a {
   width: 300px;
 }
 
-.new_article_button, .create_new_article_button, .create_new_comment_button {
+.new_article_button, .create_new_article_button, .create_new_comment_button, .tag_return_button {
   display: block;
   text-align: center;
   margin-left: 20px;
@@ -62,9 +62,15 @@ a {
 }
 
 .create_new_article_button {
-  margin-left: 20px;
+  display: inline-block;
+  margin-left: 0;
+  margin-top: 0;
   font-family: monospace;
   width: 130px;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -webkit-margin-start: 0;
+  -webkit-margin-end: 0;
 }
 
 .create_new_comment_button {
@@ -74,7 +80,11 @@ a {
   width: 60px;
 }
 
-.new_article_button:hover, .create_new_article_button:hover, .create_new_comment_button:hover {
+.tag_return_button {
+  width: 90px;
+}
+
+.new_article_button:hover, .create_new_article_button:hover, .create_new_comment_button:hover, .tag_return_button:hover {
   background-color: black;
   color: white;
 }
@@ -96,12 +106,12 @@ a {
 }
 
 #main_article_body {
-  margin: 28px 20px;
+  margin: 28px 20px 40px 20px;
   font-size: 15px;
   position: relative;
 }
 
-#return_to_articles, #delete_article, #edit_article {
+#return_to_articles, #delete_article, #edit_article, #return_to_articles_tag {
   display: block;
   position: relative;
   clear: both;
@@ -122,7 +132,7 @@ a {
   margin-left: 5px;
 }
 
-#return_to_articles:hover, #delete_article:hover, #edit_article:hover {
+#return_to_articles:hover, #delete_article:hover, #edit_article:hover, #return_to_articles_tag:hover {
   background-color: black;
   color: white;
 }
@@ -133,7 +143,7 @@ a {
   margin: 15px;
 }
 
-.new_article_title {
+.new_article_title, .tags_title {
   margin-left: 22px;
   font-size: 16px;
   font-weight: bold;
@@ -145,7 +155,7 @@ a {
   font-weight: bold;
 }
 
-.new_article_title_text, .new_comment_author_text {
+.new_article_title_text, .new_comment_author_text, .tags_title_text {
   margin-left: 22px;
   margin-top: 5px;
   font-size: 14px;
@@ -162,7 +172,7 @@ a {
   margin-left: 0;
 }
 
-.new_article_title_text:focus, .new_comment_author_text:focus {
+.new_article_title_text:focus, .new_comment_author_text:focus, .tags_title_text {
   outline: none;
 }
 
@@ -190,12 +200,10 @@ a {
 }
 
 #cancel_button {
-  display: block;
-  position: fixed;
+  display: inline-block;
   border: 1px solid black;
   padding: 5px 10px;
   font-size: 13.5px;
-  margin-left: 22px;
   -webkit-transition: background-color 0.25s, color 0.25s;
   transition: background-color 0.25s, color 0.25s;
 }
@@ -250,7 +258,7 @@ a {
 
 .comment_author {
   -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
+  -webkit-margin-after: 10px;
 }
 
 #commenter {
@@ -275,4 +283,41 @@ a {
 
 .new_comment {
   margin-left: 35px;
+}
+
+#tags {
+  margin-left: 20px;
+}
+
+#tag {
+  color: rgba(0,0,0,0.5);
+  text-decoration: underline;
+}
+
+#tag_name {
+  color: rgba(0,0,0,0.5);
+}
+
+#tagged_article_title {
+  margin-left: 20px;
+  width: 350px;
+}
+
+.edit_buttons {
+  margin-left: 20px;
+}
+
+.tag_entry {
+  margin-left: 20px;
+  width: 300px;
+  max-width: 300px;
+}
+
+#return_to_articles_tag {
+  margin-top: 20px;
+}
+
+#delete_tag {
+  float: right;
+  color: rgba(0,0,0,0.5);
 }
