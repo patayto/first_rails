@@ -47,7 +47,7 @@ a {
   width: 300px;
 }
 
-.new_article_button, .create_new_article_button {
+.new_article_button, .create_new_article_button, .create_new_comment_button {
   display: block;
   text-align: center;
   margin-left: 20px;
@@ -62,12 +62,19 @@ a {
 }
 
 .create_new_article_button {
-  margin-left: 22px;
+  margin-left: 20px;
   font-family: monospace;
   width: 130px;
 }
 
-.new_article_button:hover, .create_new_article_button:hover {
+.create_new_comment_button {
+  margin-left: 0;
+  margin-top: 5px;
+  font-family: monospace;
+  width: 60px;
+}
+
+.new_article_button:hover, .create_new_article_button:hover, .create_new_comment_button:hover {
   background-color: black;
   color: white;
 }
@@ -132,8 +139,13 @@ a {
   font-weight: bold;
 }
 
+.new_comment_author, .new_comment_header {
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
 
-.new_article_title_text {
+.new_article_title_text, .new_comment_author_text {
   margin-left: 22px;
   margin-top: 5px;
   font-size: 14px;
@@ -144,11 +156,17 @@ a {
   font-family: monospace;
 }
 
-.new_article_title_text:focus {
+.new_comment_author_text {
+  width: 200px;
+  min-width: 200px;
+  margin-left: 0;
+}
+
+.new_article_title_text:focus, .new_comment_author_text:focus {
   outline: none;
 }
 
-.new_article_body_text {
+.new_article_body_text, .new_comment_text {
   margin-left: 22px;
   margin-top: 5px;
   padding: 5px;
@@ -161,7 +179,13 @@ a {
   resize: none;
 }
 
-.new_article_body_text:focus {
+.new_comment_text {
+  width: 50%;
+  height: 100px;
+  margin-left: 0;
+}
+
+.new_article_body_text:focus, .new_comment_text:focus {
   outline: none;
 }
 
@@ -212,4 +236,43 @@ a {
   40% {
     background-color: rgba(0,0,0,0.2);
   }
+}
+
+.subtitle {
+  margin-left: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid black;
+}
+
+.comments {
+  margin-left: 20px;
+}
+
+.comment_author {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+#commenter {
+  text-decoration: underline;
+}
+
+#comment_date {
+  color: rgba(0,0,0,0.5)
+}
+
+.comment {
+  -webkit-margin-before: 10px;
+  -webkit-margin-after: 20px;
+  padding-left: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.new_comment_form {
+  margin-left: 25px;
+}
+
+.new_comment {
+  margin-left: 35px;
 }
