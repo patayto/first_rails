@@ -12,10 +12,12 @@
   <% end %>
 </p>
 <p id="main_article_body"><%= @article.body %></p>
-<div id="update_article">
-  <%= link_to 'Edit Article', edit_article_path(@article), id: "edit_article" %>
-  <%= link_to 'Delete Article', article_path(@article), method: :delete, data: {confirm: "Are you sure you want to delete the article?"},id: "delete_article" %>
-</div>
+<% if logged_in? %>
+  <div id="update_article">
+    <%= link_to 'Edit Article', edit_article_path(@article), id: "edit_article" %>
+    <%= link_to 'Delete Article', article_path(@article), method: :delete, data: {confirm: "Are you sure you want to delete the article?"},id: "delete_article" %>
+  </div>
+<% end %>
 
 <h3 class="subtitle">Comments <span id="comment_numer"><%= @article.comments.size %></span></h3>
 <%= render partial: 'articles/comment', collection: @article.comments %>

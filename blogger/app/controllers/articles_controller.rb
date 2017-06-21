@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
+  before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
 
   def index
     # @ means articles is an instance variable, so it can be accessed from outside of this class
