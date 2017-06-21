@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= f.label :username %>
-    <%= f.text_field :username %>
+    <%= f.text_field :username, :autocomplete => 'off' %>
   </div>
 
   <div class="field">
     <%= f.label :email %>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, :autocomplete => 'off' %>
   </div>
 
   <div class="field">
@@ -32,6 +32,6 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Create Author',  :class => 'create_author_button' %>
   </div>
 <% end %>

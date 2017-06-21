@@ -51,7 +51,7 @@ img {
   width: 300px;
 }
 
-.new_article_button, .create_new_article_button, .create_new_comment_button, .tag_return_button, .attachment_button {
+.new_article_button, .create_new_article_button, .create_new_comment_button, .tag_return_button, .attachment_button, .new_author_button, .back_button, .create_author_button {
   display: block;
   text-align: center;
   margin-left: 20px;
@@ -95,7 +95,23 @@ img {
   width: auto;
 }
 
-.new_article_button:hover, .create_new_article_button:hover, .create_new_comment_button:hover, .tag_return_button:hover, .attachment_button:hover {
+.new_author_button {
+  width: 82px;
+  margin-bottom: 10px;
+}
+
+.back_button {
+  width: 40px;
+  height: 15px;
+  margin-top: 10px;
+}
+
+.create_author_button {
+  width: 110px;
+  margin-top: 10px;
+}
+
+.new_article_button:hover, .create_new_article_button:hover, .create_new_comment_button:hover, .tag_return_button:hover, .attachment_button:hover, .new_author_button:hover, .back_button:hover, .create_author_button:hover {
   background-color: black;
   color: white;
 }
@@ -348,4 +364,76 @@ img {
   overflow: hidden;
   position: absolute;
   z-index: -1;
+}
+
+#footer_line{
+  margin-left: 20px;
+  -webkit-margin-before: 20px;
+}
+
+#footer {
+  -webkit-margin-before: 10px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 20px;
+  -webkit-margin-end: 0px;
+}
+
+#login, #logout {
+  color: rgba(0,0,0,0.5);
+}
+
+.author_table {
+  border-collapse: collapse;
+  margin-left: 20px;
+  width: auto;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px 10px;
+}
+
+#author_name, #author_email_address, #author_show, #author_edit, #author_destroy {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+#author_show, #author_edit, #author_destroy {
+  color: rgba(0,0,0,0.7);
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+
+#author_show:hover, #author_edit:hover, #author_destroy:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+
+label {
+  margin-left: 20px;
+  display: inline-block;
+  width: 190px;
+  float: left;
+  font-weight: bold;
+}
+
+.field {
+  display: block;
+  width: 700px;
+  padding: 3px 0;
+}
+
+#author_username, #author_email, #author_password, #author_password_confirmation {
+  display: inline-block;
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+  font-family: monospace;
+  font-size: 12px;
+  width: 170px;
+}
+
+#author_username:focus, #author_email:focus, #author_password:focus, #author_password_confirmation:focus {
+  outline:none;
+}
+
+.new_author_name, .new_author_email {
+  margin-left: 20px;
 }

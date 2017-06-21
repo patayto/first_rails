@@ -14,14 +14,14 @@
     <div id="container">
       <div id="content">
         <%= yield %>
-        <hr>
-        <h5>
+        <hr id="footer_line">
+        <h5 id="footer">
           <% if logged_in? %>
-            <%= "Logged in as #{current_user.email}" %>
-            <%= link_to "(logout)", logout_path %>
+            <%= "Logged in as: #{current_user.email}" %>
+            <%= link_to "logout", logout_path, :id => 'login' %>
           <% else %>
             Logged out
-            <%= link_to "(login)", login_path %>
+            <%= link_to "login", login_path, :id => 'logout' %>
           <% end %>
         </h6>
       </div>

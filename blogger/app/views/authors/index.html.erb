@@ -1,22 +1,21 @@
-<h1>Authors</h1>
+<h1 id="title">Authors</h1>
 
-<table>
+<table class = "author_table">
   <thead>
     <tr>
       <th>Username</th>
       <th>Email</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @authors.each do |author| %>
       <tr>
-        <td><%= author.username %></td>
-        <td><%= author.email %></td>
-        <td><%= link_to 'Show', author %></td>
-        <td><%= link_to 'Edit', edit_author_path(author) %></td>
-        <td><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td id="author_name"><%= author.username %></td>
+        <td id="author_email_address"><%= author.email %></td>
+        <td id="author_show"><%= link_to 'Show', author %></td>
+        <td id="author_edit"><%= link_to 'Edit', edit_author_path(author) %></td>
+        <td id="author_destroy"><%= link_to 'Destroy', author, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +23,5 @@
 
 <br>
 
-<%= link_to 'New Author', new_author_path %>
+<%= link_to 'New Author', new_author_path, :class =>'new_author_button' %>
+<%= link_to 'Articles Index', articles_path, :id => "return_to_articles" %>

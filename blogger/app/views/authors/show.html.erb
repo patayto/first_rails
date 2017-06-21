@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<p class="new_author_name">
   <strong>Username:</strong>
   <%= @author.username %>
 </p>
 
-<p>
+<p class="new_author_email">
   <strong>Email:</strong>
   <%= @author.email %>
 </p>
 
-<%= link_to 'Edit', edit_author_path(@author) %> |
-<%= link_to 'Back', authors_path %>
+<%= link_to 'Edit', edit_author_path(@author), :class => 'back_button' %>
+<%= link_to 'Back', authors_path, :class => 'back_button' %>
