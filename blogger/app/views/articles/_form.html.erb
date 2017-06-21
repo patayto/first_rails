@@ -1,4 +1,4 @@
-<%= form_for(@article) do |f| %>
+<%= form_for(@article, html: {multipart: true}) do |f| %>
   <ul>
   <% @article.errors.full_messages.each do |error| %>
     <li><%= error %></li>
@@ -16,9 +16,14 @@
     <%= f.label :tag_list, "Tags", :class => "tags_title" %><span> (comma seperated) </span><br>
     <%= f.text_field :tag_list, :class => "tags_title_text", :autocomplete => 'off' %>
   </p>
+  <p>
+    <%= f.label :image, "Attach an Image", :class => "attachment_title" %><br>
+    <%= f.file_field :image, :id => 'file' , :class => 'inputfile', :data => { :caption => "{count} files selected"} %>
+    <label for='file', class="attachment_button">Add Image</label>
+  </p>
   <div class="edit_buttons">
     <p>
-      <%= f.submit 'Create Article', :class => 'create_new_article_button'%>
+      <%= f.submit 'Create Article', :class => 'create_new_article_button' %>
     </p>
     <p>
       <%= link_to 'Cancel', articles_path, :id => 'cancel_button' %>
