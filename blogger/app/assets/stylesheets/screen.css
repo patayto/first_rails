@@ -45,10 +45,10 @@ img {
 }
 
 #articles {
-  display: block;
+  display: inline-block;
   background-color: white;
   margin: 20px;
-  width: 300px;
+  width: auto;
 }
 
 .new_article_button, .create_new_article_button, .create_new_comment_button, .tag_return_button, .attachment_button, .new_author_button, .back_button, .create_author_button {
