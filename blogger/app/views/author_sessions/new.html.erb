@@ -1,19 +1,19 @@
-<h1>Login</h1>
+<h1 id='title'>Login</h1>
 
 <%= form_tag author_sessions_path, method: :post do %>
-  <div class="field">
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+  <div class="login_field">
+    <span id = 'email_title' ><%= label_tag :email %></span>
+    <%= text_field_tag :email%>
     <br>
   </div>
-  <div class="field">
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
+  <div class="login_field">
+    <span id = 'password_title'><%= label_tag :password %></span>
+    <%= password_field_tag :password%>
     <br>
   </div>
   <div class="actions">
-    <%= submit_tag 'Login' %>
+    <%= submit_tag 'Login', :class => 'login_button' %>
   </div>
 <% end %>
 
-<%= link_to "Back", articles_path %>
+<%= link_to "Back", articles_path, :class => 'back_button' %>
