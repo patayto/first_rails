@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :username %>
+    <%= f.label :username, :id => 'author_username_title' %>
     <%= f.text_field :username, :autocomplete => 'off' %>
   </div>
 
   <div class="field">
-    <%= f.label :email %>
+    <%= f.label :email, :id => 'author_email_title' %>
     <%= f.text_field :email, :autocomplete => 'off' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, :id => 'author_password_title' %>
     <%= f.password_field :password %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %>
+    <%= f.label :password_confirmation, :id => 'author_password_confirmation_title' %>
     <%= f.password_field :password_confirmation %>
   </div>
 

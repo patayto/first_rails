@@ -407,7 +407,7 @@ th, td {
   background-color: rgba(0,0,0,0.1);
 }
 
-label {
+#author_username_title, #author_email_title, #author_password_title, #author_password_confirmation_title {
   margin-left: 20px;
   display: inline-block;
   width: 190px;
